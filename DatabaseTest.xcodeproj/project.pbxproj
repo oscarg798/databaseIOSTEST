@@ -15,6 +15,8 @@
 		FF512DE71C866CCA00679985 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF512DE51C866CCA00679985 /* LaunchScreen.storyboard */; };
 		FF512DF21C866CCA00679985 /* DatabaseTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF512DF11C866CCA00679985 /* DatabaseTestTests.m */; };
 		FF512DFD1C866CCA00679985 /* DatabaseTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF512DFC1C866CCA00679985 /* DatabaseTestUITests.m */; };
+		FF512E0B1C866CE500679985 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FF512E0A1C866CE500679985 /* libsqlite3.tbd */; };
+		FF512E0E1C866D3000679985 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FF512E0D1C866D3000679985 /* DBManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		FF512DF81C866CCA00679985 /* DatabaseTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatabaseTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF512DFC1C866CCA00679985 /* DatabaseTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseTestUITests.m; sourceTree = "<group>"; };
 		FF512DFE1C866CCA00679985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF512E0A1C866CE500679985 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FF512E0C1C866D3000679985 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		FF512E0D1C866D3000679985 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		FF512E0F1C86704C00679985 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF512E0B1C866CE500679985 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,8 @@
 		FF512DCB1C866CCA00679985 = {
 			isa = PBXGroup;
 			children = (
+				FF512E0F1C86704C00679985 /* libsqlite3.0.tbd */,
+				FF512E0A1C866CE500679985 /* libsqlite3.tbd */,
 				FF512DD61C866CCA00679985 /* DatabaseTest */,
 				FF512DF01C866CCA00679985 /* DatabaseTestTests */,
 				FF512DFB1C866CCA00679985 /* DatabaseTestUITests */,
@@ -110,6 +119,8 @@
 				FF512DE51C866CCA00679985 /* LaunchScreen.storyboard */,
 				FF512DE81C866CCA00679985 /* Info.plist */,
 				FF512DD71C866CCA00679985 /* Supporting Files */,
+				FF512E0C1C866D3000679985 /* DBManager.h */,
+				FF512E0D1C866D3000679985 /* DBManager.m */,
 			);
 			path = DatabaseTest;
 			sourceTree = "<group>";
@@ -273,6 +284,7 @@
 				FF512DDF1C866CCA00679985 /* ViewController.m in Sources */,
 				FF512DDC1C866CCA00679985 /* AppDelegate.m in Sources */,
 				FF512DD91C866CCA00679985 /* main.m in Sources */,
+				FF512E0E1C866D3000679985 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
