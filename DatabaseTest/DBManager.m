@@ -7,7 +7,7 @@
 //
 
 #import "DBManager.h"
-#define databaseNAme @"contacts.sql3"
+#define databaseNAme @"contacts77.sql3"
 
 @implementation DBManager
 NSString *docsDir;
@@ -40,11 +40,17 @@ NSArray *dirPaths;
     if (![[NSFileManager defaultManager] fileExistsAtPath:destinationPath]) {
         if (sqlite3_open([destinationPath UTF8String], &sqlite3Database) == SQLITE_OK) {
             char *errMsg;
-            
-            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CONTACTS (ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT,PHONENUMBER TEXT)";
+    
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS CONTACTS (ID TEXT PRIMARY KEY, NAME TEXT,PHONENUMBER TEXT)";
             
             if (sqlite3_exec(sqlite3Database, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) {
                 NSLog(@"Failed to create table");
+            }
+            
+            sql_stmt = "CREATE INDEX phone_number ON CONTACTS(PHONENUMBER)";
+            
+            if (sqlite3_exec(sqlite3Database, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK) {
+                NSLog(@"Failed to create index");
             }
             sqlite3_close(sqlite3Database);
         }
@@ -127,7 +133,7 @@ NSArray *dirPaths;
                 //BOOL executeQueryResults =sqlite3_exec(sqlite3Database, sql_stmt, NULL, NULL, &errMsg);
                 //if (executeQueryResults == SQLITE_OK) {
                 BOOL executeQueryResults = sqlite3_step(compiledStatement);
-                if (executeQueryResults == YES) {
+                if (executeQueryResults == SQLITE_OK) {
                     // Keep the affected rows.
                     self.affectedRows = sqlite3_changes(sqlite3Database);
                     

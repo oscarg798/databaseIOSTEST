@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EDF05D01C8739B60090385E /* ContacsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EDF05CF1C8739B60090385E /* ContacsManager.m */; };
 		FF512DD91C866CCA00679985 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF512DD81C866CCA00679985 /* main.m */; };
 		FF512DDC1C866CCA00679985 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF512DDB1C866CCA00679985 /* AppDelegate.m */; };
 		FF512DDF1C866CCA00679985 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF512DDE1C866CCA00679985 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3EDF05CE1C8739B60090385E /* ContacsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContacsManager.h; sourceTree = "<group>"; };
+		3EDF05CF1C8739B60090385E /* ContacsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContacsManager.m; sourceTree = "<group>"; };
 		FF512DD41C866CCA00679985 /* DatabaseTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatabaseTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF512DD81C866CCA00679985 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FF512DDA1C866CCA00679985 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +124,8 @@
 				FF512DD71C866CCA00679985 /* Supporting Files */,
 				FF512E0C1C866D3000679985 /* DBManager.h */,
 				FF512E0D1C866D3000679985 /* DBManager.m */,
+				3EDF05CE1C8739B60090385E /* ContacsManager.h */,
+				3EDF05CF1C8739B60090385E /* ContacsManager.m */,
 			);
 			path = DatabaseTest;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 				TargetAttributes = {
 					FF512DD31C866CCA00679985 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = THG6WBFYB2;
 					};
 					FF512DEC1C866CCA00679985 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -281,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EDF05D01C8739B60090385E /* ContacsManager.m in Sources */,
 				FF512DDF1C866CCA00679985 /* ViewController.m in Sources */,
 				FF512DDC1C866CCA00679985 /* AppDelegate.m in Sources */,
 				FF512DD91C866CCA00679985 /* main.m in Sources */,
@@ -425,7 +432,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DatabaseTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.com.DatabaseTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,7 +446,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DatabaseTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.com.DatabaseTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,6 +523,7 @@
 				FF512E031C866CCA00679985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF512E041C866CCA00679985 /* Build configuration list for PBXNativeTarget "DatabaseTestTests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +532,7 @@
 				FF512E061C866CCA00679985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FF512E071C866CCA00679985 /* Build configuration list for PBXNativeTarget "DatabaseTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +541,7 @@
 				FF512E091C866CCA00679985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
